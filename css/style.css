@@ -1,0 +1,159 @@
+body{
+    background-color: #DADBD3;
+}
+
+.banner{
+    background-color: #009688;
+    height: 20vh;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: -5vh;
+    z-index: -3;
+}
+
+.app_container{
+    height: 95vh;
+    width: 80vw;
+    background-color: white;
+    margin: auto;
+    margin-top: 2.5vh;
+    display: flex;
+}
+
+.section_users{
+    width: 30%;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+   
+
+}
+
+.section_chat{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu_bar{
+    background-color: #EAEAEA;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4px;
+}
+
+.user_box{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.img_user{
+    width: 50px;
+    aspect-ratio: 1/1;
+}
+
+.circle_img{
+    border-radius: 50%;
+}
+
+.boxinfo_user{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0;
+}
+
+.access_info{
+    color: gray;
+    font-size: .9rem;
+    display: inline-block;
+}
+
+.tool_box{
+    display: flex;
+    align-items: center;
+}
+
+.icon_menu{
+    width: 35px;
+    aspect-ratio: 1/1;
+    margin: 0 4px;
+}
+
+.notif_box{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    background-color: #8EDAFC;
+    padding-left: 10px;
+}
+
+.notif_icon{
+    height: 50px;
+    aspect-ratio: 1 /1;
+}
+
+.notif_active{
+    color: gray;
+    text-decoration: underline;
+}
+
+.search_box{
+    padding: 4px;
+    display: flex;
+    height: 50px;
+}
+.search_box > button{
+    background-color: white;
+    border: 1px solid gray;
+    width: 70px;
+}
+
+.search_box > input{
+    flex-grow: 1;
+    padding-left: 10px;
+}
+
+.icon_button_search{
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    margin: auto;
+    padding: 6px;
+}
+
+.users_box{
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+
+.box_chat{
+    flex-grow: 1;
+    background-image: url(../imgs/mine.jpg);
+    overflow-y: scroll;
+}
+
+.input_box{
+    height: 80px;
+    background-color: #F3EEEA;
+    display: flex;
+    padding: 15px 0;
+}
+
+.input_box > input{
+    flex-grow: 1;
+}
+
+.emoticons_box{
+    width: 100px;
+    text-align: center;
+    padding: 10px;
+}
+
+.audio_box{
+    width: 100px;
+    text-align: center;
+    padding: 10px;
+}
