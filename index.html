@@ -19,10 +19,10 @@
         <div class="banner"></div>
         <div class="app_container ">
 
-            <!-- sezione utenti -->
+            <!-- SEZIONE Utenti -->
             <div class="section_users">
 
-                <div class="menu_bar">
+                <div class="menu_bar flex-shrink-0">
                     <div class="user_box">
                         <div class="img_user">
                             <img class="img-fluid circle_img" src="imgs/avatar_io.jpg" alt="">
@@ -65,12 +65,28 @@
                 </div>
 
                 <div class="users_box">
+                    <ul>
+                        <li v-for="(user,i) in userList">
+                            <div class="d-flex px-3 py-2">
+                                <div class="img">
+                                    <img class="img-fluid circle_img" :src="'imgs/avatar'+user.avatar+'.jpg'">
+                                </div>
+                                <div class="px-2 flex-grow-1">
+                                    <div>Nome utente</div>
+                                    <div class="last_message">Ultimo mesaggio inviato</div>
+                                </div>
+                                <div>
+                                    12:00
+                                </div>
+                            </div>
 
+                        </li>
+                    </ul>
                 </div>
                 
             </div>
 
-            <!-- sezione chat -->
+            <!-- SEZIONE chat -->
             <div class="section_chat ">
 
                 <div class="menu_bar">
@@ -97,7 +113,25 @@
                 </div>
 
                 <div class="box_chat">
-
+                    <div class="d-flex justify-content-end align-items-center mb-3">
+                        <div class="massage_box out">
+                            <div class="message_text">testo mesaggio 1 </div>
+                            <div class="message_time">12:00</div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end align-items-center mb-3">
+                        <div class="massage_box out">
+                            <div class="message_text">testo messaggio 2</div>
+                            <div class="message_time">12:00</div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-start align-items-center mb-3">
+                        <div class="massage_box in">
+                            <div class="message_text">testo mesaggio 1</div>
+                            <div class="message_time">12:00</div>
+                        </div>
+                    </div>
+                   
                 </div>
 
                 <div class="input_box">

@@ -2,6 +2,11 @@ body{
     background-color: #DADBD3;
 }
 
+ul{
+    list-style: none;
+    padding: 0;
+}
+
 .banner{
     background-color: #009688;
     height: 20vh;
@@ -133,6 +138,7 @@ body{
     flex-grow: 1;
     background-image: url(../imgs/mine.jpg);
     overflow-y: scroll;
+    padding: 2rem 3rem  0 3rem;
 }
 
 .input_box{
@@ -156,4 +162,40 @@ body{
     width: 100px;
     text-align: center;
     padding: 10px;
+}
+
+.last_message{
+    color: gray;
+}
+
+.img{
+    width: 60px;
+    aspect-ratio: 1/1;
+}
+
+.massage_box{
+    width: 250px;
+    min-height: 60px;
+    border-radius: 10px;
+    display: flex;
+
+}
+
+.message_text{
+    flex-grow: 1;
+    padding: 10px ;
+}
+
+.message_time{
+    align-self: flex-end;
+    color: rgb(170, 170, 170);
+    padding-right: 5px;
+}
+
+.out{
+    background-color: #D5F9BA;
+}
+
+.in{
+    background-color: white;
 }
