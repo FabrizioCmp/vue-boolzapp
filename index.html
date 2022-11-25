@@ -130,7 +130,8 @@
                         <img class="img-fluid h-100" src="imgs/emoji.png" alt="">
                     </div>
                 
-                    <input class="ps-3" type="text" placeholder="scrivi un messaggio">
+                    <input class="ps-3" type="text" placeholder="scrivi un messaggio"
+                    v-on:keyup.enter="sendMessage" v-model="msgInput" >
                     
                     <div class="audio_box">
                         <img class="img-fluid h-100" src="imgs/microphone.png" alt="">
