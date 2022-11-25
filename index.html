@@ -16,7 +16,7 @@
 
 <body>
     <div id="app">
-        <div class="banner"></div>
+       
         <div class="app_container ">
 
             <!-- SEZIONE Utenti -->
@@ -66,14 +66,14 @@
 
                 <div class="users_box">
                     <ul>
-                        <li v-for="(user,i) in userList">
+                        <li v-for="(user,i) in userList" @click="activeUser = user">
                             <div class="d-flex px-3 py-2">
-                                <div class="img">
+                                <div class="img flex-shrink-0">
                                     <img class="img-fluid circle_img" :src="'imgs/avatar'+user.avatar+'.jpg'">
                                 </div>
                                 <div class="px-2 flex-grow-1">
-                                    <div>Nome utente</div>
-                                    <div class="last_message">Ultimo mesaggio inviato</div>
+                                    <div>{{user.name}}</div>
+                                    <div class="last_message">{{user.messages[user.messages.length-1].message}}</div>
                                 </div>
                                 <div>
                                     12:00
@@ -92,10 +92,10 @@
                 <div class="menu_bar">
                     <div class="user_box">
                         <div class="img_user">
-                            <img class="img-fluid circle_img" src="imgs/avatar_io.jpg" alt="">
+                            <img class="img-fluid circle_img" :src="'imgs/avatar' + activeUser.avatar + '.jpg'" alt="">
                         </div>
                         <div class="boxinfo_user">
-                            <div>NomeUtente</div>
+                            <div>{{activeUser.name}}</div>
                             <span class="access_info">Ultimo accesso oggi</span>
                         </div>
                     </div>
@@ -113,24 +113,15 @@
                 </div>
 
                 <div class="box_chat">
-                    <div class="d-flex justify-content-end align-items-center mb-3">
-                        <div class="massage_box out">
-                            <div class="message_text">testo mesaggio 1 </div>
+                    <div v-for="msg in activeUser.messages"
+                     class="d-flex  align-items-center mb-3" 
+                     :class="(msg.status === 'sent') ? 'justify-content-end': 'justify-content-start'">
+                        <div class="massage_box out" :class="(msg.status === 'sent') ? 'out': 'in' ">
+                            <div class="message_text">{{msg.message}} </div>
                             <div class="message_time">12:00</div>
                         </div>
                     </div>
-                    <div class="d-flex justify-content-end align-items-center mb-3">
-                        <div class="massage_box out">
-                            <div class="message_text">testo messaggio 2</div>
-                            <div class="message_time">12:00</div>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-start align-items-center mb-3">
-                        <div class="massage_box in">
-                            <div class="message_text">testo mesaggio 1</div>
-                            <div class="message_time">12:00</div>
-                        </div>
-                    </div>
+                    
                    
                 </div>
 

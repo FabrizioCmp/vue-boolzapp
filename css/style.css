@@ -1,5 +1,7 @@
 body{
-    background-color: #DADBD3;
+    height: 100vh;
+    background: rgb(0,150,136);
+    background: linear-gradient(180deg, rgba(0,150,136,1) 0%, rgba(0,150,136,1) 15%, rgba(220,219,208,1) 15%, rgba(209,219,219,1) 84%);
 }
 
 ul{
@@ -7,22 +9,15 @@ ul{
     padding: 0;
 }
 
-.banner{
-    background-color: #009688;
-    height: 20vh;
-    position: absolute;
-    right: 0;
-    left: 0;
-    top: -5vh;
-    z-index: -3;
-}
+
 
 .app_container{
     height: 95vh;
     width: 80vw;
+    position: relative;
+    top: 2.5vh;
     background-color: white;
     margin: auto;
-    margin-top: 2.5vh;
     display: flex;
 }
 
@@ -166,6 +161,7 @@ ul{
 
 .last_message{
     color: gray;
+    overflow: hidden;
 }
 
 .img{
