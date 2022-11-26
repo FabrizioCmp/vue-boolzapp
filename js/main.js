@@ -7,7 +7,7 @@ createApp({
         return {
             userList: datalist,
             activeUser: null,
-            msgInput: ""
+            msgInput: "",
         }
     },
     methods: {
@@ -40,7 +40,8 @@ createApp({
     },
     beforeMount() {
         this.activeUser = this.userList[0]
-    }
+    },
+   
 }).mount('#app')
 
 

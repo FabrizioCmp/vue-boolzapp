@@ -49,6 +49,7 @@ ul{
     display: flex;
     align-items: center;
     column-gap: 10px;
+    overflow-x: hidden;
 }
 
 .img_user{
@@ -198,3 +199,22 @@ ul{
 .in{
     background-color: white;
 }
+
+.onclcik{
+    position: relative;
+    transform: scale(1.2);
+}
+
+/*********************** EFFECTS ***********************/
+
+.user_istance:hover{
+    background-color: #8ed9fca5;
+}
+.user_istance:hover img{
+    border: 2px solid blue;
+}
+
+.user_istance:active{
+    background: rgb(80, 200, 252);
+}
+
