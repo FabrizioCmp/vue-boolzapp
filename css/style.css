@@ -163,7 +163,7 @@ ul{
     color: gray;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 240px;
+    max-width: 200px;
     white-space: nowrap;
 }
 
