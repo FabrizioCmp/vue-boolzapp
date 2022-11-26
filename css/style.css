@@ -55,10 +55,15 @@ ul{
 .img_user{
     width: 50px;
     aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 2px 1px 8px black;
+    margin: 10px 5px;
 }
 
 .circle_img{
     border-radius: 50%;
+    
 }
 
 .boxinfo_user{
@@ -205,6 +210,13 @@ ul{
     transform: scale(1.2);
 }
 
+.user_istance{
+    border-radius: 30px;
+}
+
+.b_border{
+    border: 2px solid black;
+}
 /*********************** EFFECTS ***********************/
 
 .user_istance:hover{
@@ -216,5 +228,9 @@ ul{
 
 .user_istance:active{
     background: rgb(80, 200, 252);
+}
+
+.massage_box:hover{
+    box-shadow: 2px 5px 10px black;
 }
 
