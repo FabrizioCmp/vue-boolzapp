@@ -162,6 +162,9 @@ ul{
 .last_message{
     color: gray;
     overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 240px;
+    white-space: nowrap;
 }
 
 .img{
