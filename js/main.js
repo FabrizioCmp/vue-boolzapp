@@ -8,6 +8,7 @@ createApp({
             userList: datalist,
             activeUser: null,
             msgInput: "",
+            inputSearch: "",
         }
     },
     methods: {
@@ -38,6 +39,15 @@ createApp({
 
             this.msgInput = ""
         },
+        getUsersList(){
+            if(this.inputSearch === ""){
+                return this.userList
+            }
+            else{
+                const newUserList = this.userList.filter(user => user.name.toLowerCase().includes(this.inputSearch.toLowerCase()))
+                return newUserList
+            }
+        }
         
     },
     beforeMount() {
