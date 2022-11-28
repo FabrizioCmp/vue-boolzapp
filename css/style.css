@@ -186,8 +186,10 @@ ul{
 }
 
 .message_text{
-    flex-grow: 1;
+    
     padding: 10px ;
+    width: 80%;
+    overflow-wrap: break-word;
 }
 
 .message_time{
