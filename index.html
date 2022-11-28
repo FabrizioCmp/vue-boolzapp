@@ -17,7 +17,7 @@
 
 <body>
     <div id="app">
-       
+
         <div class="app_container ">
 
             <!-- SEZIONE Utenti -->
@@ -74,9 +74,9 @@
                                 </div>
                                 <div class="px-2 flex-grow-1">
                                     <div>{{user.name}}</div>
-                                    <div class="last_message">{{user.messages[user.messages.length-1].message}}</div>
+                                    <div v-if="user.messages.length != 0" class="last_message">{{user.messages[user.messages.length-1].message}}</div>
                                 </div>
-                                <div>
+                                <div v-if ="user.messages.length != 0">
                                     {{user.messages[user.messages.length-1].date}}
                                 </div>
                             </div>
@@ -84,7 +84,7 @@
                         </li>
                     </ul>
                 </div>
-                
+
             </div>
 
             <!-- SEZIONE chat -->
@@ -114,26 +114,34 @@
                 </div>
 
                 <div class="box_chat">
-                    <div v-for="msg in activeUser.messages"
-                     class="d-flex  align-items-center mb-3" 
-                     :class="(msg.status === 'sent') ? 'justify-content-end': 'justify-content-start'">
+                    <div v-for="(msg,i) in activeUser.messages" class="d-flex  align-items-center mb-3"
+                        :ref="'ref-' + i"
+                        :class="(msg.status === 'sent') ? 'justify-content-end': 'justify-content-start'">
                         <div class="massage_box out" :class="(msg.status === 'sent') ? 'out': 'in' ">
                             <div class="message_text">{{msg.message}} </div>
-                            <div class="message_time">{{msg.date}}</div>
+                            <div class="d-flex flex-column justify-content-between">
+                                <div class="icon align-self-end position-relative">
+                                    <img class="img-fluid" src="imgs/chevronDown.png" alt="" @click="showMenu(i)">
+                                    <div v-if="msg.displayMenu" class="down_menu">
+                                        <div>message info</div>
+
+                                        <div class="delete_btn" @click="deleteMsg(i)">Delete mesage</div>
+                                    </div>
+                                </div>
+                                <div class="message_time">{{msg.date}}</div>
+                            </div>
                         </div>
                     </div>
-                    
-                   
                 </div>
 
                 <div class="input_box">
                     <div class="emoticons_box">
                         <img class="img-fluid h-100" src="imgs/emoji.png" alt="">
                     </div>
-                
-                    <input class="ps-3" type="text" placeholder="scrivi un messaggio"
-                    v-on:keyup.enter="sendMessage" v-model="msgInput" >
-                    
+
+                    <input class="ps-3" type="text" placeholder="scrivi un messaggio" v-on:keyup.enter="sendMessage"
+                        v-model="msgInput">
+
                     <div class="audio_box">
                         <img class="img-fluid h-100" src="imgs/microphone.png" alt="">
                     </div>

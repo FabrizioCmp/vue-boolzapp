@@ -5,17 +5,20 @@ const datalist = [{
     messages: [{
         date: luxon.DateTime.fromFormat('10/01/2020 15:30:55','dd/LL/yyyy HH:mm:ss').toFormat('HH:mm'),
         message: 'Hai portato a spasso il cane?',
-        status: 'sent'
+        status: 'sent',
+        displayMenu: false,
     },
     {
         date: luxon.DateTime.fromFormat('10/01/2020 15:50:00', 'dd/LL/yyyy HH:mm:ss').toFormat('HH:mm'),
         message: 'Ricordati di dargli da mangiare',
-        status: 'sent'
+        status: 'sent',
+        displayMenu: false,
     },
     {
         date: luxon.DateTime.fromFormat('10/01/2020 16:15:22', 'dd/LL/yyyy HH:mm:ss').toFormat('HH:mm'),
         message: 'Tutto fatto!',
-        status: 'received'
+        status: 'received',
+        displayMenu: false,
     }
     ],
 },
@@ -26,19 +29,23 @@ const datalist = [{
     messages: [{
         date: luxon.DateTime.fromFormat('20/03/2020 16:30:00', 'dd/LL/yyyy HH:mm:ss').toFormat('HH:mm'),
         message: 'Ciao come stai?',
-        status: 'sent'
+        status: 'sent',
+        displayMenu: false,
     },
     {
         date: luxon.DateTime.fromFormat('20/03/2020 16:30:55', 'dd/LL/yyyy HH:mm:ss').toFormat('HH:mm'),
         message: 'Bene grazie! Stasera ci vediamo?',
-        status: 'received'
+        status: 'received',
+        displayMenu: false,
     },
     {
         date: luxon.DateTime.fromFormat('20/03/2020 16:35:00', 'dd/LL/yyyy HH:mm:ss').toFormat('HH:mm'),
         message: 'Mi piacerebbe ma devo andare a fare la spesa.',
-        status: 'sent'
+        status: 'sent',
+        displayMenu: false,
     }
     ],
+    
 },
 {
     name: 'Samuele',
@@ -47,17 +54,20 @@ const datalist = [{
     messages: [{
         date: luxon.DateTime.fromFormat('28/03/2020 10:10:40', 'dd/LL/yyyy HH:mm:ss').toFormat('HH:mm'),
         message: 'La Marianna va in campagna',
-        status: 'received'
+        status: 'received',
+        displayMenu: false,
     },
     {
         date: luxon.DateTime.fromFormat('28/03/2020 10:20:10', 'dd/LL/yyyy HH:mm:ss').toFormat('HH:mm'),
         message: 'Sicuro di non aver sbagliato chat?',
-        status: 'sent'
+        status: 'sent',
+        displayMenu: false,
     },
     {
         date: luxon.DateTime.fromFormat('28/03/2020 16:15:22', 'dd/LL/yyyy HH:mm:ss').toFormat('HH:mm'),
         message: 'Ah scusa!',
-        status: 'received'
+        status: 'received',
+        displayMenu: false,
     }
     ],
 },
@@ -68,12 +78,14 @@ const datalist = [{
     messages: [{
         date: luxon.DateTime.fromFormat('10/01/2020 15:30:55', 'dd/LL/yyyy HH:mm:ss').toFormat('HH:mm'),
         message: 'Lo sai che ha aperto una nuova pizzeria?',
-        status: 'sent'
+        status: 'sent',
+        displayMenu: false,
     },
     {
         date: luxon.DateTime.fromFormat('10/01/2020 15:50:00', 'dd/LL/yyyy HH:mm:ss').toFormat('HH:mm'),
         message: 'Si, ma preferirei andare al cinema',
-        status: 'received'
+        status: 'received',
+        displayMenu: false,
     }
     ],
 },
@@ -84,12 +96,14 @@ const datalist = [{
     messages: [{
         date: luxon.DateTime.fromFormat('10/01/2020 15:30:55', 'dd/LL/yyyy HH:mm:ss').toFormat('HH:mm'),
         message: 'Lo sai che ha aperto una nuova pizzeria?',
-        status: 'sent'
+        status: 'sent',
+        displayMenu: false,
     },
     {
         date: luxon.DateTime.fromFormat('10/01/2020 15:50:00', 'dd/LL/yyyy HH:mm:ss').toFormat('HH:mm'),
         message: 'ok!',
-        status: 'received'
+        status: 'received',
+        displayMenu: false,
     }
     ],
 },
@@ -100,12 +114,14 @@ const datalist = [{
     messages: [{
         date: luxon.DateTime.fromFormat('28/03/2020 10:10:40', 'dd/LL/yyyy HH:mm:ss').toFormat('HH:mm'),
         message: 'Lo sai che ha aperto una nuova pizzeria?',
-        status: 'sent'
+        status: 'sent',
+        displayMenu: false,
     },
     {
         date: luxon.DateTime.fromFormat('10/01/2020 15:50:00', 'dd/LL/yyyy HH:mm:ss').toFormat('HH:mm'),
         message: 'oggi che fai?',
-        status: 'received'
+        status: 'received',
+        displayMenu: false,
     }
     ],
 },
@@ -116,7 +132,8 @@ const datalist = [{
     messages: [{
         date: luxon.DateTime.fromFormat('28/03/2020 16:15:22', 'dd/LL/yyyy HH:mm:ss').toFormat('HH:mm'),
         message: 'Lo sai che ha aperto una nuova pizzeria?',
-        status: 'sent'
+        status: 'sent',
+        displayMenu: false,
     }],
 },
 {
@@ -126,12 +143,14 @@ const datalist = [{
     messages: [{
         date: luxon.DateTime.fromFormat('10/01/2020 15:30:55', 'dd/LL/yyyy HH:mm:ss').toFormat('HH:mm'),
         message: 'Lo sai che ha aperto una nuova pizzeria?',
-        status: 'sent'
+        status: 'sent',
+        displayMenu: false,
     },
     {
         date: luxon.DateTime.fromFormat('10/01/2020 15:50:00', 'dd/LL/yyyy HH:mm:ss').toFormat('HH:mm'),
         message: 'siamo andati in pizzeria e poi a bere',
-        status: 'received'
+        status: 'received',
+        displayMenu: false,
     }
     ],
 },

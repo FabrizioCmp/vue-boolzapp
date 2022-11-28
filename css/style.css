@@ -192,7 +192,7 @@ ul{
 
 .message_time{
     align-self: flex-end;
-    color: rgb(170, 170, 170);
+    color: #aaaaaa;
     padding-right: 5px;
 }
 
@@ -216,6 +216,34 @@ ul{
 .b_border{
     border: 2px solid black;
 }
+
+.icon{
+    width: 20px;
+    height: 20px;
+    color: black;
+    margin-right: 5px;
+}
+
+.down_menu{
+    min-width: 140px;
+    height: 80px;
+    padding: 0 10px;
+    background-color:rgb(80, 200, 252);
+    position: absolute;
+    z-index: 50;
+    left: -80px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: rgb(61, 99, 250);
+    box-shadow: 2px 5px 10px black ;
+}
+
+.delete_btn{
+    color: red;
+}
 /*********************** EFFECTS ***********************/
 
 .user_istance:hover{
@@ -233,3 +261,12 @@ ul{
     box-shadow: 2px 5px 10px black;
 }
 
+.delete_btn:hover{
+    text-decoration: underline;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.icon > img:hover{
+    cursor: pointer;
+}
