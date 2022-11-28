@@ -17,12 +17,12 @@ createApp({
         //e poi svuota l'input
         sendMessage() {
             const newMessage = {
-                date: '',
+                date: luxon.DateTime.now().toFormat('HH:mm'),
                 message: this.msgInput,
                 status: 'sent'
             }
             const newAnswer = {
-                date: '',
+                date: luxon.DateTime.now().toFormat('HH:mm'),
                 message: 'ok',
                 status: 'received'
             }
@@ -33,6 +33,8 @@ createApp({
             setTimeout(function(){
                 user.messages.push(newAnswer)
             }, 1000)
+
+            console.log(newMessage.date)
 
             this.msgInput = ""
         },
